@@ -1,0 +1,10 @@
+<h1>Projects</h1>
+<div *ngIf="projects">
+  <ul>
+    <li *ngFor="let project of visibleProjects">
+      <h2><a [routerLink]="['/projects/', project.slug]" routerLinkActive="active">{{project.name}}</a></h2>
+      <p>{{ project.start | date }} &ndash; {{ project.end | date }}</p>
+      <!-- <div [innerHTML]="project.description"></div> -->
+    </li>
+  </ul>
+</div>
